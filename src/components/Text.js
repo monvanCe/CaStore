@@ -1,12 +1,16 @@
-import React from 'react';
-import {Text, View} from 'react-native';
+import React from 'react'
+import {StyleSheet} from 'react-native';
 
-export default ({value}) => {
-    return (
-        <View>
-            <Text style = {{fontSize:25,fontWeight:'bold',color:'pink'}}>
-                {value}
-            </Text>
-        </View>
-    ) 
-}
+export default StyleSheet.create({
+    btext: {
+        fontWeight: '700',
+        color: '#000',
+        fontSize: 24,
+    },
+    itext:{
+        fontWeight: '500',
+        fontSize:14,
+        color:'#666',
+    }
+});
+
