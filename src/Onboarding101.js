@@ -2,7 +2,6 @@ import React from 'react'
 import { View, StatusBar, Text} from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import styles from './components/Text'
-import Carousel from './components/Carousel101'
 
 export default () => {
     return (
@@ -11,8 +10,6 @@ export default () => {
             <StatusBar barStyle="dark-content" backgroundColor={'transparent'}/>
 
             <View style={{ flex: 1 }}>
-                <Carousel/>
-
                 <Text style={styles.btext}>
                     {'Welcome to CaStore !'}
                 </Text>
