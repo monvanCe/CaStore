@@ -2,12 +2,12 @@ import React from 'react'
 import {StyleSheet} from 'react-native';
 
 export default StyleSheet.create({
-    btext: {
+    mtext: {
         fontWeight: '700',
         color: '#000',
         fontSize: 24,
     },
-    itext:{
+    stext:{
         fontWeight: '500',
         fontSize:14,
         color:'#666',
