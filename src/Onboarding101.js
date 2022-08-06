@@ -1,12 +1,15 @@
 import React from 'react'
 import { View, StatusBar, Text, Image} from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
+import { useNavigation } from '@react-navigation/native';
 
 import styles from './components/Text'
 import Button from './components/Button'
 
 
 export default () => {
+    const navigation = useNavigation();
+
     return (
         <SafeAreaView>
 
@@ -35,7 +38,7 @@ export default () => {
                     {'we create the best quality products'}
                 </Text>
 
-                <Button text='Get Started' icon={require('./assets/long-arrow.png')} />
+                <Button text='Get Started' icon={require('./assets/LongArrow.png')} onPress= {()=>navigation.navigate("Signing")}/>
             </View>
                 
         </SafeAreaView>
