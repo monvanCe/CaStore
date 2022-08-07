@@ -7,9 +7,7 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 import styles from '../components/Text'
 import Button from '../components/Button'
 
-
-
-export default () => {
+export const Onboarding = ({navigation}) => {
     return (
         <SafeAreaView>
 
@@ -23,7 +21,7 @@ export default () => {
                         height: '63.6%',
                         resizeMode: 'stretch',
                     }}
-                    source={require('./assets/Onboardin101-Carousel2.png')}
+                    source={require('../assets/Onboardin101-Carousel2.png')}
                 />
 
                 <Text style={[styles.mtext, {textAlign: 'center', marginTop: '12%'}]}>
@@ -38,7 +36,7 @@ export default () => {
                     {'we create the best quality products'}
                 </Text>
 
-                <Button text='Get Started' icon={require('./assets/LongArrow.png')} />
+                <Button text='Get Started' icon={require('../assets/LongArrow.png')} onPress={() => navigation.navigate('Signing')} />
             </View>
                 
         </SafeAreaView>

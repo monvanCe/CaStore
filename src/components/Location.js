@@ -1,4 +1,5 @@
 import React from 'react'
+import { View,Image,Text } from 'react-native'
 
 export default () => {
     return (
@@ -7,7 +8,7 @@ export default () => {
                 style={{}}
                 source={require('../assets/Location.png')}
             />
-            <Text style={{fontSize:12, fontWeight: '700',}}>Hanoi, Vietnam</Text>
+            <Text style={{fontSize:12, fontWeight: '700', justifyContent: 'center'}}>Hanoi, Vietnam</Text>
         </View>
     )
 }

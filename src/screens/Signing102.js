@@ -1,16 +1,16 @@
 import React from 'react'
+import { StatusBar } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 
 import Location from '../components/Location'
 
-export default function Signing() {
+export const Signing = () => {
     return (
+        <SafeAreaView>
 
-            <SafeAreaView>
-                <StatusBar barStyle="dark-content" backgroundColor={'transparent'}/>
-                    
-                <Location/>
-            </SafeAreaView>
-
+            <StatusBar barStyle="dark-content" backgroundColor={'transparent'}/>       
+            <Location/>
+            
+        </SafeAreaView>
     )
 }   
