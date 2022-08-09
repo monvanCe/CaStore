@@ -4,7 +4,7 @@ import { StyleSheet, TouchableOpacity, Text, View, Image } from 'react-native';
 
 export default  ({ text, onPress, icon }) => {
     return (
-        <TouchableOpacity style= {{alignItems:'center'}} onPress={onPress}>
+        <TouchableOpacity style= {{alignItems:'center', position: 'absolute' , bottom:0, left: '12.5%'}} onPress={onPress}>
         <View style={styles.button}>
             <Text style={styles.buttonText}>{text}</Text>
                 <Image
