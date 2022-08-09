@@ -9,10 +9,10 @@ export default  ({ text, onPress, icon }) => {
                 <Text style={styles.buttonText}>{text}</Text>
                 <Image
                     style={{
-                        marginTop: '-7%',
+                        marginTop: '-6%',
                         marginLeft: '88%',
                         width: 24,
-                        height: 24,
+                        height: 16,
                         resizeMode: 'stretch',
                     }}
                     source={icon}

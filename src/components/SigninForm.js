@@ -9,9 +9,10 @@ export default() => {
     return (
         <SafeAreaView>
             <View>
-                <Text>
-                    Username or Email
+                <Text style={{paddingBottom:20, fontSize:12, fontWeight: '500', color: '#8F92A1'}}>
+                    {'Username or Email'}
                 </Text>
+
                 <View style={{flexDirection: 'row' }}>
                     <Image style={{height:24, width: 24}} source={require('../assets/Avatar.png')} />
                     <TextInput
@@ -24,14 +25,14 @@ export default() => {
             </View>
 
             <View style={{marginVertical: 8,
-                borderBottomColor: '#737373',
+                borderBottomColor: '#8F92A1',
                 borderBottomWidth: StyleSheet.hairlineWidth,}}/>
 
             <View>
-                <Text>
-                    Password
+                <Text style={{paddingTop:35, fontSize:12, fontWeight: '500', color: '#8F92A1'}}>
+                    {'Password'}
                 </Text>
-                <View style={{flexDirection: 'row'}}>
+                <View style={{flexDirection: 'row', paddingTop:20}}>
                     <Image style={{height:24, width: 24}} source={require('../assets/Lock.png')}/>
                     <TextInput
                         secureTextEntry={true}
@@ -41,14 +42,15 @@ export default() => {
                         placeholder="Password"
                         keyboardType="numeric"
                     />
-                    <TouchableOpacity style={{position: 'absolute', right:0}}>
+                    <TouchableOpacity style={{position: 'absolute', right:0, bottom:0}}>
                         <Image style={{height:24,width:24}} source={require('../assets/Eye.png')}/>
                     </TouchableOpacity>
                 </View>
             </View>
 
-            <View style={{marginVertical: 8,
-                borderBottomColor: '#737373',
+            <View style={{
+                marginVertical: 8,
+                borderBottomColor: '#8F92A1',
                 borderBottomWidth: StyleSheet.hairlineWidth,}}/>
         </SafeAreaView>
     );
@@ -56,10 +58,12 @@ export default() => {
 
 const styles = StyleSheet.create({
     input: {
+        color: 'black',
         height: 24,
         marginRight: 20,
         borderWidth: 0,
         padding: 0,
+        paddingLeft: 15,
         fontWeight: '500'
     },
 })
