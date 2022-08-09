@@ -1,7 +1,7 @@
 // libraries
 import React from 'react'
-import { View, StatusBar, Text, Image} from 'react-native'
-import { SafeAreaView } from 'react-native-safe-area-context'
+import { View, StatusBar, Text, Image, SafeAreaView} from 'react-native'
+
 
 // components
 import styles from '../components/Text'
