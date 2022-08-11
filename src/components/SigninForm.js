@@ -1,12 +1,29 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {TextInput, StyleSheet, SafeAreaView, Image, View, TouchableOpacity, Text} from 'react-native'
 
 
 export default() => {
+
     const [username, onChangeText] = React.useState(null);
-    const [password, onChangeNumber] = React.useState(null);
+
+    const [password, setPassword] = useState('');
+    const [passwordVisibility, setPasswordVisibility] = useState(true);
+    const [rightIcon, setRightIcon] = useState('eye');
+
+    const handlePasswordVisibility = () => {
+        if (rightIcon === 'eye') {
+          setRightIcon('eye-off');
+          setPasswordVisibility(!passwordVisibility);
+        } else if (rightIcon === 'eye-off') {
+          setRightIcon('eye');
+          setPasswordVisibility(!passwordVisibility);
+        }
+      };
     
     return (
+        passwordVisibility,
+        rightIcon,
+        handlePasswordVisibility,
         <SafeAreaView>
             <View>
                 <Text style={{paddingBottom:20, fontSize:12, fontWeight: '500', color: '#8F92A1'}}>
@@ -39,14 +56,26 @@ export default() => {
                     <Image style={{height:24, width: 24}} source={require('../assets/Lock.png')}/>
                     <TextInput
                         placeholderTextColor='#a8acbf'
-                        secureTextEntry={true}
                         style={styles.input}
-                        onChangeText={onChangeNumber}
+                        name="password"
+                        placeholder="Enter password"
+                        autoCapitalize="none"
+                        autoCorrect={false}
+                        textContentType="newPassword"
+                        secureTextEntry={passwordVisibility}
                         value={password}
-                        placeholder="Password"
+                        enablesReturnKeyAutomatically
+                        onChangeText={text => setPassword(text)}
                     />
-                    <TouchableOpacity style={{position: 'absolute', right:0, bottom:0}}>
-                        <Image style={{height:24,width:24}} source={require('../assets/Eye.png')}/>
+                    <TouchableOpacity 
+                        name={rightIcon} 
+                        style={{position: 'absolute', 
+                        right:0, 
+                        bottom:0}} 
+                        onPress={handlePasswordVisibility}>
+                            <Image 
+                            style={{height:24,width:24}} 
+                            source={require('../assets/Eye.png')}/>
                     </TouchableOpacity>
                 </View>
             </View>

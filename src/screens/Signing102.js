@@ -13,7 +13,7 @@ export const Signing = () => {
     return (
         <SafeAreaView style={{flex: 1, paddingHorizontal:46}}>
 
-            <StatusBar barStyle="dark-content" backgroundColor={'pink'}/> 
+            <StatusBar barStyle="dark-content" backgroundColor={'transparent'}/> 
 
             <View style={{marginTop: '5.5%', flex:3.2}}>
 
