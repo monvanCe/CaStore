@@ -16,6 +16,7 @@ export default() => {
                 <View style={{flexDirection: 'row' }}>
                     <Image style={{height:24, width: 24}} source={require('../assets/Avatar.png')} />
                     <TextInput
+                        placeholderTextColor='#a8acbf'
                         style={styles.input}
                         onChangeText={onChangeText}
                         value={username}
@@ -24,7 +25,9 @@ export default() => {
                 </View>
             </View>
 
-            <View style={{marginVertical: 8,
+            <View style={{
+                opacity: 0.2,
+                marginVertical: 8,
                 borderBottomColor: '#8F92A1',
                 borderBottomWidth: StyleSheet.hairlineWidth,}}/>
 
@@ -35,12 +38,12 @@ export default() => {
                 <View style={{flexDirection: 'row', paddingTop:20}}>
                     <Image style={{height:24, width: 24}} source={require('../assets/Lock.png')}/>
                     <TextInput
+                        placeholderTextColor='#a8acbf'
                         secureTextEntry={true}
                         style={styles.input}
                         onChangeText={onChangeNumber}
                         value={password}
                         placeholder="Password"
-                        keyboardType="numeric"
                     />
                     <TouchableOpacity style={{position: 'absolute', right:0, bottom:0}}>
                         <Image style={{height:24,width:24}} source={require('../assets/Eye.png')}/>
@@ -49,6 +52,7 @@ export default() => {
             </View>
 
             <View style={{
+                opacity: 0.2,
                 marginVertical: 8,
                 borderBottomColor: '#8F92A1',
                 borderBottomWidth: StyleSheet.hairlineWidth,}}/>

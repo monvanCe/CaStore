@@ -11,50 +11,66 @@ import Form from '../components/SigninForm'
 
 export const Signing = () => {
     return (
-        <SafeAreaView style={{flex: 1}}>
+        <SafeAreaView style={{flex: 1, paddingHorizontal:46}}>
 
-            <StatusBar barStyle="dark-content" backgroundColor={'transparent'}/> 
+            <StatusBar barStyle="dark-content" backgroundColor={'pink'}/> 
 
-            <View style={{paddingHorizontal:46, marginTop: '4.5%', flex:3.1}}>
+            <View style={{marginTop: '5.5%', flex:3.2}}>
 
-                <Location style={{ }} />
+                <View style={{flex:1}}>
+                    <Location/>
+                </View>
 
-                <View style={{flex: 0.19}}/>
+                <View style={{flex:1.3}}>
 
-                <Text style={[styles.mtext, {}]}>
-                    {"Let's Sign You In"}
-                </Text>
+                        <Text style={[styles.mtext, {}]}>
+                            {"Let's Sign You In"}
+                        </Text>
 
-                <View style={{flex:0.075}}/>
 
-                <Text style={[styles.stext,{}]}>
-                    {"Welcome back, you'have been missed!"}
-                </Text>
 
-                <View style={{flex:0.15}}/>
+                        <Text style={[styles.stext, {paddingTop: '3%'}]}>
+                            {"Welcome back, you'have been missed!"}
+                        </Text>
 
-                <Form/>
+                </View>
+
+                <View style={{flex:4}}>
+                    <Form/>
+                </View>
             </View>
 
             <View style={{flex:1}}>
 
-                <Button text='SIGN IN' icon={require('../assets/SignIn.png')}/>
+                <View style={{flex:1}}>
+                    <Button text='SIGN IN' icon={require('../assets/SignIn.png')}/>
+                </View>
 
-                <Text style={{paddingHorizontal:46, textAlign: 'center', fontSize:12, fontWeight: '500', color: '#8F92A1', paddingTop: 20}}>
-                    {"Don't have an account?"}
-                    <Text style={{color: 'black'}}>
-                        {'Sign Up'}
+                <View style={{flex:0.8}}/>
+
+                <View style={{flex:1}}>
+                    <Text style={{
+                        paddingHorizontal:46, 
+                        textAlign: 'center', 
+                        fontSize:12, fontWeight: '500', 
+                        color: '#8F92A1'}}>
+                        {"Don't have an account?"}
+                        <Text style={{color: 'black'}}>
+                            {' Sign Up'}
+                        </Text>
                     </Text>
-                </Text>
+                </View>
 
                 <View style={{
+                width: '500%',
                 opacity: 0.2,
-                paddingTop: 21,
                 marginVertical: 8,
                 borderBottomColor: '#8F92A1',
                 borderBottomWidth: StyleSheet.hairlineWidth,}}/>
 
-                <ButtonFB text='Connect with Facebook' icon={require('../assets/FB.png')}/>
+                <View style={{flex:2, alignItems: 'center', justifyContent: 'center'}}>
+                    <ButtonFB text='Connect with Facebook' icon={require('../assets/FB.png')}/>
+                </View>
 
             </View>
 

@@ -11,7 +11,7 @@ export const Onboarding = ({navigation}) => {
     return (
         <SafeAreaView style={{flex:1}}>
 
-            <StatusBar barStyle="dark-content" backgroundColor={'transparent'}/>
+            <StatusBar barStyle="dark-content" backgroundColor={'pink'}/>
 
             <View style={{flex:2, paddingTop: 17}}>
                 <Image
