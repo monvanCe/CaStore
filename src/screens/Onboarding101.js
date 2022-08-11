@@ -9,9 +9,9 @@ import Button from '../components/Button'
 
 export const Onboarding = ({navigation}) => {
     return (
-        <SafeAreaView style={{flex:1}}>
+        <SafeAreaView style={{flex:1, backgroundColor:'white' }}>
 
-            <StatusBar barStyle="dark-content" backgroundColor={'transparent'}/>
+            <StatusBar barStyle="dark-content" backgroundColor={'white'}/>
 
             <View style={{flex:2, paddingTop: 17}}>
                 <Image

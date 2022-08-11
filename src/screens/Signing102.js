@@ -11,9 +11,9 @@ import Form from '../components/SigninForm'
 
 export const Signing = () => {
     return (
-        <SafeAreaView style={{flex: 1, paddingHorizontal:46}}>
+        <SafeAreaView style={{flex: 1, paddingHorizontal:46, backgroundColor: 'white'}}>
 
-            <StatusBar barStyle="dark-content" backgroundColor={'transparent'}/> 
+            <StatusBar barStyle="dark-content" backgroundColor={'white'}/> 
 
             <View style={{marginTop: '5.5%', flex:3.2}}>
 
