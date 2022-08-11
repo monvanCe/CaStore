@@ -5,25 +5,19 @@ import {TextInput, StyleSheet, SafeAreaView, Image, View, TouchableOpacity, Text
 export default() => {
 
     const [username, onChangeText] = React.useState(null);
-
     const [password, setPassword] = useState('');
+
     const [passwordVisibility, setPasswordVisibility] = useState(true);
-    const [rightIcon, setRightIcon] = useState('eye');
+
 
     const handlePasswordVisibility = () => {
-        if (rightIcon === 'eye') {
-          setRightIcon('eye-off');
-          setPasswordVisibility(!passwordVisibility);
-        } else if (rightIcon === 'eye-off') {
-          setRightIcon('eye');
-          setPasswordVisibility(!passwordVisibility);
-        }
+        setPasswordVisibility(!passwordVisibility)
       };
     
     return (
         passwordVisibility,
-        rightIcon,
         handlePasswordVisibility,
+
         <SafeAreaView>
             <View>
                 <Text style={{paddingBottom:20, fontSize:12, fontWeight: '500', color: '#8F92A1'}}>
@@ -68,7 +62,6 @@ export default() => {
                         onChangeText={text => setPassword(text)}
                     />
                     <TouchableOpacity 
-                        name={rightIcon} 
                         style={{position: 'absolute', 
                         right:0, 
                         bottom:0}} 
