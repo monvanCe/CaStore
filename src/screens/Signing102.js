@@ -9,45 +9,31 @@ import Location from '../components/Location'
 import styles from '../components/Text'
 import Form from '../components/SigninForm'
 
-export const Signing = () => {
+export const Signing = ({navigation}) => {
     return (
         <SafeAreaView style={{flex: 1, paddingHorizontal:46, backgroundColor: 'white'}}>
-
             <StatusBar barStyle="dark-content" backgroundColor={'white'}/> 
-
             <View style={{marginTop: '5.5%', flex:3.2}}>
-
                 <View style={{flex:1}}>
                     <Location/>
                 </View>
-
                 <View style={{flex:1.3}}>
-
                         <Text style={[styles.mtext, {}]}>
                             {"Let's Sign You In"}
                         </Text>
-
-
-
                         <Text style={[styles.stext, {paddingTop: '3%'}]}>
                             {"Welcome back, you'have been missed!"}
                         </Text>
-
                 </View>
-
                 <View style={{flex:4}}>
                     <Form/>
                 </View>
             </View>
-
             <View style={{flex:1}}>
-
                 <View style={{flex:1}}>
                     <Button text='SIGN IN' icon={require('../assets/SignIn.png')}/>
                 </View>
-
                 <View style={{flex:0.8}}/>
-
                 <View style={{flex:1, flexDirection:'row', paddingHorizontal:46 }}>
                     <Text style={{
                         textAlign: 'center', 
@@ -55,25 +41,22 @@ export const Signing = () => {
                         color: '#8F92A1'}}>
                         {"Don't have an account?"}
                     </Text>
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={() => navigation.navigate('Register')}>
                         <Text style={{color: 'black', fontSize: 12, fontWeight: '500'}}>
                             {' Sign Up'}
                         </Text>
                     </TouchableOpacity>
                 </View>
-
                 <View style={{
-                width: '500%',
-                opacity: 0.2,
-                marginVertical: 8,
-                borderBottomColor: '#8F92A1',
-                borderBottomWidth: StyleSheet.hairlineWidth,}}/>
-
+                    width: '500%',
+                    opacity: 0.2,
+                    marginVertical: 8,
+                    borderBottomColor: '#8F92A1',
+                    borderBottomWidth: StyleSheet.hairlineWidth,}}/>
                 <View style={{flex:2, alignItems: 'center', justifyContent: 'center'}}>
                     <ButtonFB text='Connect with Facebook' icon={require('../assets/FB.png')}/>
                 </View>
             </View>
-
         </SafeAreaView>
     )
 }   
