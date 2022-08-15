@@ -11,8 +11,8 @@ export default  ({ text, onPress, icon }) => {
                     style={{
                         marginTop: '-6%',
                         marginLeft: '88%',
-                        width: 24,
-                        height: 16,
+                        width: 38*0.6,
+                        height: 32*0.6,
                         resizeMode: 'stretch',
                     }}
                     source={icon}
