@@ -1,5 +1,5 @@
 import React from 'react'
-import { StatusBar, View, Text, SafeAreaView, StyleSheet } from 'react-native'
+import { StatusBar, View, Text, SafeAreaView, StyleSheet, TouchableOpacity} from 'react-native'
 
 
 //components
@@ -48,17 +48,18 @@ export const Signing = () => {
 
                 <View style={{flex:0.8}}/>
 
-                <View style={{flex:1}}>
+                <View style={{flex:1, flexDirection:'row', paddingHorizontal:46 }}>
                     <Text style={{
-                        paddingHorizontal:46, 
                         textAlign: 'center', 
-                        fontSize:12, fontWeight: '500', 
+                        fontSize:12, fontWeight: '500',
                         color: '#8F92A1'}}>
                         {"Don't have an account?"}
-                        <Text style={{color: 'black'}}>
+                    </Text>
+                    <TouchableOpacity>
+                        <Text style={{color: 'black', fontSize: 12, fontWeight: '500'}}>
                             {' Sign Up'}
                         </Text>
-                    </Text>
+                    </TouchableOpacity>
                 </View>
 
                 <View style={{
@@ -71,7 +72,6 @@ export const Signing = () => {
                 <View style={{flex:2, alignItems: 'center', justifyContent: 'center'}}>
                     <ButtonFB text='Connect with Facebook' icon={require('../assets/FB.png')}/>
                 </View>
-
             </View>
 
         </SafeAreaView>
