@@ -13,11 +13,8 @@ export default() => {
     const handlePasswordVisibility = () => {
         setPasswordVisibility(!passwordVisibility)
       };
-    
-    return (
-        passwordVisibility,
-        handlePasswordVisibility,
 
+    return (
         <SafeAreaView>
             <View>
                 <Text style={{paddingBottom:20, fontSize:12, fontWeight: '500', color: '#8F92A1'}}>
@@ -59,7 +56,7 @@ export default() => {
                         secureTextEntry={passwordVisibility}
                         value={password}
                         enablesReturnKeyAutomatically
-                        onChangeText={text => setPassword(text)}
+                        onChangeText={setPassword}
                     />
                     <TouchableOpacity 
                         style={{position: 'absolute', 
