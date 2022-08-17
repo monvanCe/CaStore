@@ -11,9 +11,9 @@ import Form from '../components/SigninForm'
 
 export const Signing = ({navigation}) => {
     return (
-        <SafeAreaView style={{flex: 1, paddingHorizontal:46, backgroundColor: 'white'}}>
+        <SafeAreaView style={{flex: 1, backgroundColor: 'white'}}>
             <StatusBar barStyle="dark-content" backgroundColor={'white'}/> 
-            <View style={{marginTop: '5.5%', flex:3.2}}>
+            <View style={{marginTop: '5.5%', flex:3.2, paddingHorizontal:46, }}>
                 <View style={{flex:1}}>
                     <Location/>
                 </View>
@@ -34,7 +34,7 @@ export const Signing = ({navigation}) => {
                     <Button text='SIGN IN' icon={require('../assets/SignIn.png')}/>
                 </View>
                 <View style={{flex:0.8}}/>
-                <View style={{flex:1, flexDirection:'row', paddingHorizontal:46 }}>
+                <View style={{flex:1, flexDirection:'row', paddingHorizontal:46, justifyContent: 'center' }}>
                     <Text style={{
                         textAlign: 'center', 
                         fontSize:12, fontWeight: '500',
@@ -48,7 +48,6 @@ export const Signing = ({navigation}) => {
                     </TouchableOpacity>
                 </View>
                 <View style={{
-                    width: '500%',
                     opacity: 0.2,
                     marginVertical: 8,
                     borderBottomColor: '#8F92A1',
