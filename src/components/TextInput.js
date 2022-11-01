@@ -1,8 +1,8 @@
 import React, {useState} from 'react'
 import {Text, View, Image, TextInput, StyleSheet} from 'react-native'
 
-export default ( {label, icon, placeholder} ) => {
-    const [text, onChangeText] = useState(null);
+export default ( {label, icon, placeholder, onChangeText, text} ) => {
+
     return (
     <View>
         <Text style={{fontSize:12, fontWeight: '500', color: '#8F92A1'}}>
