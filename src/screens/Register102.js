@@ -6,24 +6,38 @@ import Location from '../components/Location'
 import styles from '../components/Text'
 import TextInput from '../components/TextInput'
 import PasswordInput from '../components/PasswordInput'
-import { useSelector } from 'react-redux'
-import { dataSelector } from '../redux/selector'
 
-export const Register = () => {
-    const data = useSelector(dataSelector)
+//import redux
+import { Provider } from 'react-redux';
+import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
+
+import store from '../redux/store';
+
+import { increment } from '../redux/reducer';
+import { decrement } from '../redux/reducer';
+import { reset } from '../redux/reducer';
+
+
+
+export const Register2 = () => {
+
+    const dispatch = useDispatch()
+
+    const counter = useSelector(state => state.counter)
 
     const [text, onChangeText] = useState(null);
 
     const countincrease = () => {
-        
+        dispatch(increment())
     }
 
     const countdecrease = () => {
-        
+        dispatch(decrement())
     }
     
-    const countupdate = () => {
-        
+    const countreset = () => {
+        dispatch(reset())
     }
     
   return (
@@ -48,11 +62,19 @@ export const Register = () => {
         <View style={{flex:1, justifyContent: 'center'}}>
             <Button title='increase' onPress={countincrease}/>
             <Text style={{textAlign: 'center', fontSize: 25}}>
-                {data}
+                {counter}
             </Text>
             <Button title='decrease' onPress={countdecrease}/>
-            <Button title='update' onPress={countupdate}/>
+            <Button title='reset' onPress={countreset}/>
         </View>
     </SafeAreaView>
   )
 }
+
+export const Register = () => {
+    return (
+      <Provider store={store}>
+          <Register2 />
+      </Provider>
+    );
+  }
