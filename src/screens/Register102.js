@@ -16,17 +16,15 @@ import store from '../redux/store';
 
 import { increment } from '../redux/reducer';
 import { decrement } from '../redux/reducer';
-import { reset } from '../redux/reducer';
+import { update } from '../redux/reducer';
 
-
+export const [text, onChangeText] = useState(null);
 
 export const Register2 = () => {
 
     const dispatch = useDispatch()
-
+    
     const counter = useSelector(state => state.counter)
-
-    const [text, onChangeText] = useState(null);
 
     const countincrease = () => {
         dispatch(increment())
@@ -36,8 +34,8 @@ export const Register2 = () => {
         dispatch(decrement())
     }
     
-    const countreset = () => {
-        dispatch(reset())
+    const countupdate = () => {
+        dispatch(update())
     }
     
   return (
@@ -65,7 +63,7 @@ export const Register2 = () => {
                 {counter}
             </Text>
             <Button title='decrease' onPress={countdecrease}/>
-            <Button title='reset' onPress={countreset}/>
+            <Button title='update' onPress={countupdate}/>
         </View>
     </SafeAreaView>
   )

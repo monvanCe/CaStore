@@ -1,7 +1,9 @@
+import Text from '../screens/Register102.js'
+
 // Actions
 const INCREMENT = "INCREMENT";
 const DECREMENT = "DECREMENT";
-const RESET = "RESET";
+const UPDATE = "UPDATE";
 
 // Action creators
 export const increment = () => ({
@@ -12,8 +14,8 @@ export const decrement = () => ({
     type: DECREMENT,
 })
 
-export const reset = () => ({
-    type: RESET
+export const update = () => ({
+    type: UPDATE,
 })
 
 // Initial state
@@ -34,10 +36,10 @@ const rootReducer = (state = initialState, action) => {
                 ...state,
                 counter: state.counter - 1
             }
-        case RESET:
+        case UPDATE:
             return {
                 ...state,
-                counter: 0
+                counter: Text
             }
         default:
             return state
